@@ -19,6 +19,9 @@
 		86D326EC1670730F006749DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D326EB1670730F006749DD /* ViewController.m */; };
 		86D326EF1670730F006749DD /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D326ED1670730F006749DD /* ViewController_iPhone.xib */; };
 		86D326F21670730F006749DD /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86D326F01670730F006749DD /* ViewController_iPad.xib */; };
+		86D326FB1670733F006749DD /* MCImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D326FA1670733F006749DD /* MCImageCache.m */; };
+		86D326FD16707436006749DD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 86D326FC16707436006749DD /* README.md */; };
+		86D32702167085FD006749DD /* large-image.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D32701167085FD006749DD /* large-image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,10 @@
 		86D326EB1670730F006749DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		86D326EE1670730F006749DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		86D326F11670730F006749DD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		86D326F91670733F006749DD /* MCImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCImageCache.h; path = Classes/MCImageCache.h; sourceTree = "<group>"; };
+		86D326FA1670733F006749DD /* MCImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCImageCache.m; path = Classes/MCImageCache.m; sourceTree = "<group>"; };
+		86D326FC16707436006749DD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		86D32701167085FD006749DD /* large-image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "large-image.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,8 @@
 		86D326C31670730F006749DD = {
 			isa = PBXGroup;
 			children = (
+				86D326FC16707436006749DD /* README.md */,
+				86D326F81670731F006749DD /* Classes */,
 				86D326D81670730F006749DD /* MCImageCache */,
 				86D326D11670730F006749DD /* Frameworks */,
 				86D326CF1670730F006749DD /* Products */,
@@ -85,6 +94,7 @@
 		86D326D81670730F006749DD /* MCImageCache */ = {
 			isa = PBXGroup;
 			children = (
+				86D326FE16708548006749DD /* Assets */,
 				86D326E11670730F006749DD /* AppDelegate.h */,
 				86D326E21670730F006749DD /* AppDelegate.m */,
 				86D326EA1670730F006749DD /* ViewController.h */,
@@ -108,6 +118,23 @@
 				86D326E81670730F006749DD /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86D326F81670731F006749DD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				86D326F91670733F006749DD /* MCImageCache.h */,
+				86D326FA1670733F006749DD /* MCImageCache.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		86D326FE16708548006749DD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				86D32701167085FD006749DD /* large-image.png */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +194,8 @@
 				86D326E91670730F006749DD /* Default-568h@2x.png in Resources */,
 				86D326EF1670730F006749DD /* ViewController_iPhone.xib in Resources */,
 				86D326F21670730F006749DD /* ViewController_iPad.xib in Resources */,
+				86D326FD16707436006749DD /* README.md in Resources */,
+				86D32702167085FD006749DD /* large-image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +209,7 @@
 				86D326DF1670730F006749DD /* main.m in Sources */,
 				86D326E31670730F006749DD /* AppDelegate.m in Sources */,
 				86D326EC1670730F006749DD /* ViewController.m in Sources */,
+				86D326FB1670733F006749DD /* MCImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +301,7 @@
 				GCC_PREFIX_HEADER = "MCImageCache/MCImageCache-Prefix.pch";
 				INFOPLIST_FILE = "MCImageCache/MCImageCache-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -282,6 +313,7 @@
 				GCC_PREFIX_HEADER = "MCImageCache/MCImageCache-Prefix.pch";
 				INFOPLIST_FILE = "MCImageCache/MCImageCache-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

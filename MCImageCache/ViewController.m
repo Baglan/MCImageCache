@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "MCImageCache.h"
+
+#define LARGE_IMAGE_NAME    @"large-image"
 
 @interface ViewController ()
 
@@ -18,6 +21,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [MCImageCache prerenderAndCacheImageForName:LARGE_IMAGE_NAME completion:^{
+        _imageView.image = [MCImageCache imageForName:LARGE_IMAGE_NAME];
+        [_activityIndicator stopAnimating];
+    }];
 }
 
 - (void)didReceiveMemoryWarning
